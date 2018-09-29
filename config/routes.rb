@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+# You want to go to the posts page. The call is get. You go to the posts controller
+# and you go to the action 'index' within the posts controller
+#  www.example.com/posts => goes to ^
+  root 'products#index'
+
+  post '/products', controller: 'products', action: 'add_to_cart'
+  get '/products' => 'products#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
