@@ -1,0 +1,8 @@
+<%cart.each do |product|%>
+<p><%=product%><p>
+<%end%>
+
+<%= form_tag ({controller: 'products', action: 'add', method: 'post'}) do%>
+<input name=product>
+<input type=submit>
+<%end%>
